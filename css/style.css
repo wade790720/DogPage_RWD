@@ -1,0 +1,153 @@
+body {
+    background: #eee;
+    font-size: 13px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    color: #d9444a;
+    text-align: center;
+    margin: 1em 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    background-color: #d9444a;
+}
+
+.menu li {
+    text-decoration: none;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+/* 手機裝置的選單開關 */
+
+.menu-switch {
+    display: none;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.menu-switch:hover {
+    cursor: pointer;
+}
+
+
+/* 選單 */
+
+#switch {
+    display: none;
+}
+
+
+/* 內容 */
+
+.title {
+    color: #d9444a;
+    margin: 1em 0;
+}
+
+.content {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.entry p {
+    margin: 1em 0;
+}
+
+.box {
+    background: #d9444a;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.box a {
+    display: block;
+    color: #fff;
+    padding: 2em 0;
+}
+
+.box a:hover {
+    text-decoration: none;
+}
+
+.box:hover {
+    background: #555;
+}
+
+.box .glyphicon {
+    font-size: 3em;
+}
+
+footer {
+    margin-top: 2em;
+    border-top: 3px solid #d9444a;
+    text-align: center;
+}
+
+.copyright {
+    margin: 1em 0;
+    color: #555;
+    letter-spacing: .1em;
+}
+
+@media only screen and (max-width: 992px) {
+    .box h3 {
+        display: none;
+    }
+    /* 手機裝置的選單 */
+    .menu-switch {
+        display: block;
+        background: #d9444a;
+    }
+    header {
+        background: #555;
+    }
+    ul.menu {
+        display: none;
+        /*瀏覽器預設 ul 的 left 為 40px*/
+        /* ul 跟 row 在同一層，所以要把 row 的 margin-left:-15px 加回去*/
+        margin-left: -55px;
+    }
+    .menu li {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #888;
+        padding: 1em 0;
+    }
+    .menu li:last-child {
+        border-bottom: 0;
+    }
+    #switch:checked + ul.menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .box h3 {
+        display: inline-block;
+        line-height: 1em;
+        margin-left: .5em;
+    }
+    .box .glyphicon {
+        display: inline-block;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+}
